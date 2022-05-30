@@ -1,4 +1,5 @@
 # CS426_Intent
 ## Vy
-alarm
-calender
+alarm, calender
+## Cat
+map, camera
