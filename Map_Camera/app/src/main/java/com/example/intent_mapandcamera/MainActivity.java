@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -36,6 +37,16 @@ public class MainActivity extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             ImageView imageView = (ImageView) findViewById(R.id.image_view_display);
             imageView.setImageBitmap(imageBitmap);
+        }
+    }
+
+    public void showMap(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        Uri geoLocation = Uri.parse("geo:0,0?q=Trường+Đại+học+Khoa+học+Tự+nhiên+TPHCM?z=5");
+        intent.setData(geoLocation);
+        try {
+            startActivity(intent);
+        }catch (ActivityNotFoundException e){
         }
     }
 }

@@ -11,7 +11,7 @@
         android:id="@+id/text_view_camera_intent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Press the button below to take a picture"
+        android:text="Camera Intent"
         android:textAlignment="center"
         android:textSize="20dp"
         android:layout_marginTop="30dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_camera_intent"
+        android:id="@+id/button_camera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Take picture"
@@ -36,9 +36,19 @@
         android:id="@+id/image_view_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/button_camera_intent"
+        app:layout_constraintTop_toBottomOf="@id/button_camera"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/button_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/image_view_display"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Take video"
+        android:textSize="20dp"/>
 
     <TextView
         android:id="@+id/text_view_map_intent"
@@ -61,6 +71,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="Access map"
         android:textSize="20dp"
-        android:layout_marginBottom="400dp"/>
+        android:layout_marginBottom="400dp"
+        android:onClick="showMap"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
