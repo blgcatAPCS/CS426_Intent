@@ -13,7 +13,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    private final int numPictureTaken = 1;
+    private final int REQUEST_PICTURE_TAKEN = 1;
+    private final int REQUEST_VIDEO_TAKEN = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +25,17 @@ public class MainActivity extends AppCompatActivity {
     public void takePicture(View view) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         try {
-            startActivityForResult(intent, numPictureTaken);
+            startActivityForResult(intent, REQUEST_PICTURE_TAKEN);
         } catch (ActivityNotFoundException e){
         }
     }
 
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == numPictureTaken && resultCode == RESULT_OK) {
+        if (requestCode == REQUEST_PICTURE_TAKEN && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             ImageView imageView = (ImageView) findViewById(R.id.image_view_display);
