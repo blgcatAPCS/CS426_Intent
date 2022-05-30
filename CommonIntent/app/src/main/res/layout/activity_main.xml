@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BDD5EA"
+        android:layout_weight = "1"
+        android:id="@+id/clock"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ALARM CLOCK"
+            android:layout_weight="1"
+            android:textSize="25dp"
+            android:textColor="#495867"
+            android:textAlignment="center" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:textColor="#F7F7FF"
+            android:hint="Input Second"
+            android:id="@+id/secondInput"
+            android:inputType="number"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input Message"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:id="@+id/messageInput"
+            android:inputType="text"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:onClick="alarmClockActivate"
+            android:backgroundTint="#577399"
+            android:text="Set Alarm"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#577399"
+        android:layout_weight = "1"
+        android:id="@+id/calendar"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:text="CALENDAR"
+            android:textAlignment="center"
+            android:textColor="#F7F7FF"
+            android:textSize="25dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:hint="Input Title"
+            android:textColor="#F7F7FF"
+            android:id="@+id/titleInput"
+            android:inputType="text"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:hint="Input Location"
+            android:textColor="#F7F7FF"
+            android:id="@+id/locationInput"
+            android:inputType="text"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:hint="Input Begin Time From Now (DD/MM/YYYY)"
+            android:textColor="#F7F7FF"
+            android:id="@+id/beginInput"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:backgroundTint="#BDD5EA"
+            android:textColor="#577399"
+            android:onClick="calendarActivate"
+            android:text="Set Calendar" />
+    </LinearLayout>
+
+</LinearLayout>
