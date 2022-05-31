@@ -8,4 +8,4 @@ music, phone
 ## Khanh
 file storage, web browser
 ## Linh
-Media, Search
+note, Search
