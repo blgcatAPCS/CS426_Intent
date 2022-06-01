@@ -1,6 +1,6 @@
 # CS426_Intent
 ## Vy
-alarm, calender
+timer, calender
 ## Cat
 map, camera
 ## Quynh
